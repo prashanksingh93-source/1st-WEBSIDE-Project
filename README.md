@@ -72,10 +72,3 @@ The landing page includes:
 
 ---
 
-
-
----
-
-## 📄 License
-
-This project was created for educational and assessment purposes.
