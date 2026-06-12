@@ -1,0 +1,310 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Inter',sans-serif;
+    background:#f8f8fb;
+    color:#111;
+    overflow-x:hidden;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+:root{
+    --primary:#4f5de4;
+    --border:#e6e6ef;
+}
+
+/* NAVBAR */
+
+header{
+    padding:20px 0;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:32px;
+    font-weight:700;
+}
+
+.nav-right{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.btn{
+    padding:12px 28px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:var(--primary);
+    border:2px solid var(--primary);
+    color:white;
+}
+
+.btn-primary:hover{
+    background:white;
+    color:var(--primary);
+}
+
+.btn-outline{
+    background:white;
+    border:2px solid var(--primary);
+    color:var(--primary);
+}
+
+.btn-outline:hover{
+    background:var(--primary);
+    color:white;
+}
+
+.menu-btn{
+    background:none;
+    border:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    padding:70px 0;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:64px;
+    line-height:1.2;
+    margin-bottom:25px;
+}
+
+.hero h1 span{
+    color:var(--primary);
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.features{
+    max-width:500px;
+    margin:0 auto 35px;
+    text-align:left;
+}
+
+.features li{
+    margin-bottom:15px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-bottom:60px;
+}
+
+.hero-image{
+    max-width:600px;
+    margin:auto;
+}
+
+/* WHY SECTION */
+
+.why{
+    padding:80px 0;
+    text-align:center;
+}
+
+.why h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.why span{
+    color:var(--primary);
+}
+
+.why p{
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.why-image{
+    max-width:500px;
+    margin:50px auto;
+}
+
+.cards{
+    display:grid;
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:25px;
+    text-align:left;
+    transition:.3s;
+}
+
+.card:hover{
+    border-color:var(--primary);
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+/* MOBILE MENU */
+
+.overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    opacity:0;
+    visibility:hidden;
+    transition:.3s;
+    z-index:99;
+}
+
+.overlay.active{
+    opacity:1;
+    visibility:visible;
+}
+
+.mobile-menu{
+    position:fixed;
+    top:0;
+    right:-100%;
+    width:320px;
+    height:100vh;
+    background:white;
+    padding:30px;
+    transition:.3s;
+    z-index:100;
+}
+
+.mobile-menu.active{
+    right:0;
+}
+
+.menu-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.close-btn{
+    border:none;
+    background:none;
+    font-size:30px;
+    cursor:pointer;
+}
+
+.mobile-menu ul{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+    margin-bottom:30px;
+}
+
+.mobile-menu a{
+    color:#111;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+.hero h1{
+    font-size:48px;
+}
+
+.why h2{
+    font-size:40px;
+}
+
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:36px;
+}
+
+.why h2{
+    font-size:32px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+}
+
+.hero-buttons .btn{
+    width:100%;
+}
+
+.contact-btn{
+    display:none;
+}
+
+.mobile-menu{
+    width:85%;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero h1{
+    font-size:30px;
+}
+
+.why h2{
+    font-size:28px;
+}
+
+.logo{
+    font-size:26px;
+}
+
+}
+
